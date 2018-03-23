@@ -9,17 +9,17 @@ class Polynomial {
 	private:
 		int degreePolynom;
 		T* coeff;
+		void Clear();
 	public:
 		Polynomial();
 		Polynomial(int);
 		Polynomial(int, T*);
 		Polynomial(const Polynomial< T >&);
 		~Polynomial();
-		void Clear();
 		int GetDegree();
 		bool IsNullPolynom() const;
 		T evaluate(const T&) const;
-		T operator[](const int) const;
+		T& operator[](int);
 		Polynomial< T >& operator=(const Polynomial< T >&);
 		bool operator==(const Polynomial< T >&) const;
 		bool operator!=(const Polynomial< T >&) const;

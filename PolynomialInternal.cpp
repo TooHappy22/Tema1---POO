@@ -87,7 +87,7 @@ T Polynomial< T >::evaluate(const T& x) const {
 }
 
 template< class T >
-T Polynomial< T >::operator[](const int index) const {
+T& Polynomial< T >::operator[](int index) {
 	return this->coeff[index];
 }
 
